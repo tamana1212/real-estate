@@ -846,8 +846,11 @@ footer {
     color: #1a1a1a;
     position: absolute;
     right: 31px;
+    display: flex;
     top: 50%;
     transform: translateY(-50%);
+    align-items: center;
+    gap: 7px;
 }
 
 .sub-footer {
