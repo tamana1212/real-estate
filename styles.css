@@ -674,27 +674,24 @@ header {
     transition: border-color 0.3s ease;
 }
 
-/* Label Disappears (moves up) on Focus or when Input has Value */
-.form-input:focus+.form-label {
+.form-input:focus + .form-label,
+.form-input:valid + .form-label {
     top: -18px;
     left: 10px;
     font-size: 12px;
     color: #499CFF;
 }
 
-/* Add Focus Effect to Input Fields */
 .form-input:focus {
     outline: none;
     border-color: #499CFF;
 }
 
-/* Red Asterisk for Required Fields */
 .form-label.red::after {
     content: "*";
     color: #eb5757;
 }
 
-/* Submit Button Styling */
 .submit-button {
     background-color: #499CFF;
     color: white;
@@ -895,8 +892,16 @@ footer {
     margin-left: 20px
 }
 
-.whatsapp_icon{
-    position: absolute;
+.whatsapp_icon{ 
+    position: fixed;
     right: 20px;
-    bottom: 30px;
+    bottom: 90px;
+
+}
+
+.whatsapp_icon img{
+    object-fit: cover;
+    object-position: center;
+    height: 50px;
+    width: 50px;
 }
