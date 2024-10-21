@@ -239,7 +239,7 @@ header {
     font-weight: 400;
     line-height: 22.56px;
     text-align: center;
-    color: #444444;    
+    color: #444444;
 }
 
 .hero a {
@@ -552,6 +552,14 @@ header {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.expert.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -585,7 +593,7 @@ header {
     width: calc(100% - 200px);
     padding-inline: 20px;
     margin: 0 auto;
-    box-shadow: 0px 10px 200px -80px #193A4B4D;
+    box-shadow: 0px 8.97px 179.44px -71.78px #193A4B4D;
     border-radius: 50px;
     margin-block: 171px;
     position: relative;
@@ -605,7 +613,7 @@ header {
 .info_wrapper::after {
     position: absolute;
     content: "";
-    background-color: #183A4A;
+    background-color: #A8D0FF;
     height: 100%;
     width: 20%;
     top: 0;
@@ -674,8 +682,8 @@ header {
     transition: border-color 0.3s ease;
 }
 
-.form-input:focus + .form-label,
-.form-input:valid + .form-label {
+.form-input:focus+.form-label,
+.form-input:valid+.form-label {
     top: -18px;
     left: 10px;
     font-size: 12px;
@@ -892,16 +900,42 @@ footer {
     margin-left: 20px
 }
 
-.whatsapp_icon{ 
+.whatsapp_icon {
     position: fixed;
     right: 20px;
     bottom: 90px;
 
 }
 
-.whatsapp_icon img{
+.whatsapp_icon img {
     object-fit: cover;
     object-position: center;
     height: 50px;
     width: 50px;
+}
+
+.spinner {
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #499CFF;
+    width: 18px;
+    height: 18px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.submit-button {
+    position: relative;
 }
