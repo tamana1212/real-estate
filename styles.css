@@ -260,7 +260,7 @@ header {
     padding: 115px 20px;
     display: flex;
     flex-direction: column;
-    gap: 86px;
+    gap: 50px;
 }
 
 .vision_container .content {
@@ -458,6 +458,13 @@ header {
     flex-direction: column;
     gap: 30px;
     width: 40%;
+    position: relative;
+}
+
+.customers-right > img{
+    position: absolute;
+    right: 0px;
+    top: 0px
 }
 
 .customer-desc {
@@ -491,10 +498,11 @@ header {
 }
 
 .customer-comment {
-    font-family: Roboto;
-    font-weight: 500;
-    line-height: 36.1px;
+    font-family: Petrona;
     font-size: 19px;
+    font-weight: 400;
+    line-height: 36.1px;
+    text-align: left;  
     max-width: 545px;
 }
 
@@ -534,7 +542,6 @@ header {
 }
 
 .team_wrapper h3 {
-    font-family: Roboto;
     font-size: 40px;
     font-weight: 500;
     line-height: 52px;
@@ -543,12 +550,11 @@ header {
 }
 
 .team_wrapper>p {
-    font-family: Roboto;
     font-size: 17px;
     max-width: 763px;
     line-height: 19.92px;
     text-align: center;
-    color: #1A1A1A;
+    color: #444444;
 }
 
 .expert {
@@ -568,7 +574,6 @@ header {
 
 
 .experts_wrap .expert h4 {
-    font-family: Roboto;
     font-size: 21px;
     font-weight: 500;
     line-height: 25.2px;
@@ -576,7 +581,6 @@ header {
 }
 
 .experts_wrap .expert h4 p {
-    font-family: Roboto;
     font-size: 15px;
     line-height: 28.5px;
     text-align: left;
@@ -809,7 +813,6 @@ footer {
 }
 
 .footer_container h4 {
-    font-family: Roboto;
     font-size: 40px;
     font-weight: 500;
     line-height: 40px;
@@ -819,7 +822,6 @@ footer {
 }
 
 .footer_container p {
-    font-family: Roboto;
     font-size: 15px;
     font-weight: 400;
     line-height: 28.5px;
@@ -883,7 +885,7 @@ footer {
     line-height: 28.5px;
     text-align: center;
     color: #1a1a1a;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .socials a {
