@@ -296,7 +296,7 @@
                 class="contact-form gform"
                 id="gform"
                 method="POST"
-                action="https://script.google.com/macros/s/AKfycbx4_zhGWW53ShmBd22XJGUdEkXwDHaRMq6l1dC3gWt7mez0LaeQ6QZ9kI1iPy7c8TSEdw/exec"
+                action="https://script.google.com/macros/s/AKfycbzVWCNnF413ELa7goQtSJxzXDMlRQIuaxvCFTOLn7ciW5GZcpoIDtLvQTljJApdfKyzDA/exec"
               >
                 <div class="form_main">
                   <div class="form-group">
@@ -624,8 +624,11 @@
                 formBtn.style.display = "none";
                 thankYouMessage.style.display = "block";
               }
-            } else {
-              // Reset button on error
+
+              // Change button text to "Sent"
+              submitButton.innerHTML = "Sent";
+            } else if (xhr.readyState === 4 && xhr.status !== 200) {
+              // Reset button on error and show "Send" again
               submitButton.disabled = false;
               submitButton.innerHTML = "SEND";
             }
