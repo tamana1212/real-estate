@@ -293,7 +293,7 @@ header {
 .card_wrap .card {
     border: 1px solid #97C6FF;
     background-color: #FFFFFF;
-    padding: 18px 18px 18px 12px;
+    padding: 18px 16px 17px 12px;
     gap: 10px;
     border-radius: 24px;
     display: flex;
@@ -379,7 +379,7 @@ header {
 }
 
 .services_list h4 {
-    margin-block: 20px 10px;
+    margin-block: 20px 6px;
     font-family: Roboto;
     font-size: 21px;
     font-weight: 500;
@@ -599,7 +599,7 @@ header {
     margin: 0 auto;
     box-shadow: 0px 8.97px 179.44px -71.78px #193A4B4D;
     border-radius: 50px;
-    margin-block: 171px;
+    margin-block: 120px;
     position: relative;
     overflow: hidden;
     position: relative;
@@ -626,7 +626,7 @@ header {
 
 .contact-container h3 {
     font-family: Montserrat;
-    font-size: 54px;
+    font-size: 48px;
     font-weight: 700;
     line-height: 65.83px;
     text-align: left;
@@ -635,12 +635,13 @@ header {
 
 .contact-container p {
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0.01em;
     text-align: left;
     color: #000;
+    margin-block-start: 17px;
 }
 
 .contact-container h3 span {
@@ -759,7 +760,7 @@ header {
 }
 
 .form_container {
-    margin-block-start: 40px;
+    margin-block-start: 35px;
 }
 
 .contact-container>div {
@@ -791,7 +792,7 @@ footer {
 .footer_container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 4px;
     align-items: center;
     padding: 60px 20px;
     justify-content: center;
@@ -814,6 +815,7 @@ footer {
     line-height: 40px;
     text-align: center;
     color: #1a1a1a;
+    margin-block-start: 30px;
 }
 
 .footer_container p {
@@ -823,6 +825,7 @@ footer {
     line-height: 28.5px;
     text-align: center;
     color: #1a1a1a;
+    margin-block-end: 30px;
 }
 
 .footer_container input {
