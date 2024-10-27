@@ -849,13 +849,16 @@ footer {
     width: 100%;
 }
 
-.footer_container input::placeholder,
 .footer_container input {
     font-family: Roboto;
     font-size: 15px;
     font-weight: 400;
     line-height: 17.58px;
     color: #1a1a1a;
+}
+
+.footer_container input::placeholder{
+    color: #444444f0;
 }
 
 .footer_container .email {
