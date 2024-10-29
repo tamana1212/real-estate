@@ -44,6 +44,25 @@
                     <a href="./index.html#contact_us" class="cta-button">Get in touch</a>
                 </div>
             </nav>
+            <input type="checkbox" id="toggle">
+
+            <label for="toggle" class="hamburger">
+                <div class="top-bun"></div>
+                <div class="meat"></div>
+                <div class="bottom-bun"></div>
+            </label>
+            <div class="ham-nav">
+                <div class="ham-nav-wrapper">
+                    <div class="flex">
+                        <a href="#" class="nav-link">Home</a>
+                        <a href="./whyus.html" target="_blank" class="nav-link">Why Us</a>
+                        <a href="#team" class="nav-link">Members</a>
+                        <a href="#vision" class="nav-link">Vision</a>
+                        <a href="#feedback" class="nav-link">Feedback</a>
+                        <a href="#contact_us" class="nav-link">Contact Us</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <section class="why_us">
@@ -198,6 +217,17 @@
     <a href="https://wa.me/9999194461" target="_blank" class="whatsapp_icon">
         <img src="./assets/whatsapp.svg" alt="whatsapp icon" />
     </a>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const toggleCheckbox = document.getElementById('toggle');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                toggleCheckbox.checked = false;
+            });
+        });
+    </script>
 </body>
 
 </html>

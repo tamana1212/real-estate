@@ -542,6 +542,8 @@ header {
     gap: 30px;
     align-items: center;
     margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .experts_wrap .expert img {
@@ -984,6 +986,8 @@ footer {
 
 .why_us .container .right_section {
     width: 40%;
+    display: flex;
+    flex-direction: column;
 }
 
 .why_us .container .right_section h2 {
@@ -1012,7 +1016,7 @@ footer {
     line-height: 23.44px;
     text-align: left;
     color: #fff;
-
+    width: max-content;
 
 }
 
@@ -1037,6 +1041,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .benefits {
@@ -1216,6 +1221,34 @@ footer {
 }
 
 
+@media screen and (max-width: 1150px) {
+    .contact-container .img_container {
+        display: none;
+    }
+
+    .contact-container>div {
+        width: 100%;
+    }
+
+    .info_wrapper {
+        width: calc(100% - 100px);
+    }
+
+    .contact-container {
+        padding-inline: 0px;
+    }
+
+    .info_wrapper::after {
+        width: 30%;
+    }
+
+    .sub-footer p {
+        margin-left: 0px;
+    }
+
+}
+
+
 @media screen and (max-width: 1056px) {
     .hamburger {
         display: block;
@@ -1228,7 +1261,9 @@ footer {
 
     .hero h1,
     .vision_container .content h2,
-    .services-wrapper>h3 {
+    .services-wrapper>h3,
+    .contact-container h3,
+    .why_us .container .right_section h2 {
         font-size: 32px;
         text-align: center;
         line-height: 32px;
@@ -1236,8 +1271,11 @@ footer {
 
     .hero p,
     .vision_container .content p,
-    .services-wrapper>p {
+    .services-wrapper>p,
+    .contact-container p,
+    .why_us .container .right_section p {
         font-size: 18px;
+        text-align: center;
     }
 }
 
@@ -1253,6 +1291,29 @@ footer {
     .services_content {
         padding-inline: 0px;
     }
+
+    .why_us .container {
+        flex-direction: column;
+    }
+
+    .why_us .container .right_section {
+        width: 100%;
+        align-items: center;
+    }
+
+    .why_us .container .right_section h2 {
+        text-align: center;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .sub-footer {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
 }
 
 
@@ -1260,17 +1321,64 @@ footer {
 
     .hero h1,
     .vision_container .content h2,
-    .services-wrapper>h3 {
+    .services-wrapper>h3,
+    .contact-container h3,
+    .footer_container h4,
+    .why_us .container .right_section h2 {
         font-size: 28px;
     }
 
     .hero p,
     .vision_container .content p,
-    .services-wrapper>p {
+    .services-wrapper>p,
+    .contact-container p,
+    .why_us .container .right_section p {
         font-size: 16px;
     }
 
     .card_wrap {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .info_wrapper {
+        width: calc(100% - 40px);
+        margin-block: 60px;
+    }
+
+    .vision_container,
+    .team_wrapper {
+        padding-block: 60px;
+    }
+
+    .customers {
+        margin-block: 60px;
+    }
+
+    .info_wrapper::after {
+        display: none;
+    }
+
+    .footer_container .email {
+        width: 400px;
+    }
+
+    .why_us .container .right_section p {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .contact_info {
+        flex-direction: column;
+    }
+
+    .footer_container .email {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .benefits {
+        width: 333px;
     }
 }
