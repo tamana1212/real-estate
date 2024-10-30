@@ -16,6 +16,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png" />
   <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.4/swiper-bundle.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -203,35 +206,65 @@
       </div>
     </div>
     <div class="customers-right">
-      <img src="./assets/comma.svg" alt="comma " />
-      <div class="customer-desc">
-        <img src="assets/test1.svg" alt="" />
-        <div class="customer-details">
-          <h5>Arun Sharma</h5>
-          <span>Businessman</span>
+      <div class="swiper-container testimonial-swiper">
+        <div class="swiper-wrapper">
+          <div class="testimonial-card swiper-slide">
+            <div class="card-head">
+              <img class="customer-img" src="./assets/test1.svg">
+              <div class="customer-detail">
+                <h5>Arun Sharma</h5>
+                <span>Businessman </span>
+              </div>
+            </div>
+            <p class="card-body">
+              Searches for multiplexes, property comparisons, and the loan estimator. Works great. “Property Guru made
+              buying our first home a breeze. Their team was with us every step of the way with very soft process.
+            </p>
+          </div>
+          <div class="testimonial-card swiper-slide">
+            <div class="card-head">
+              <img class="customer-img" src="./assets/test1.svg">
+              <div class="customer-detail">
+                <h5>Arun Sharma</h5>
+                <span>Businessman </span>
+              </div>
+            </div>
+            <p class="card-body">
+              Searches for multiplexes, property comparisons, and the loan estimator. Works great. “Property Guru made
+              buying our first home a breeze. Their team was with us every step of the way with very soft process.
+            </p>
+          </div>
+          <div class="testimonial-card swiper-slide">
+            <div class="card-head">
+              <img class="customer-img" src="./assets/test1.svg">
+              <div class="customer-detail">
+                <h5>Arun Sharma</h5>
+                <span>Businessman </span>
+              </div>
+            </div>
+            <p class="card-body">
+              Searches for multiplexes, property comparisons, and the loan estimator. Works great. “Property Guru made
+              buying our first home a breeze. Their team was with us every step of the way with very soft process.
+            </p>
+          </div>
         </div>
       </div>
-      <p class="customer-comment">
-        Searches for multiplexes, property comparisons, and the loan
-        estimator. Works great. “Property Guru made buying our first home a
-        breeze. Their team was with us every step of the way with very soft
-        process.
-      </p>
-      <div class="customer-btns">
-        <div class="btn btn-prev">
+      <img src="./assets/comma.svg" alt="inverted comma" class="comma">
+      <div class="navigation-btns">
+        <span class="testimonial-prev">
           <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M1.87598 6.35449L7.33496 11.8135L6.80176 12.3721L0.78418 6.35449L6.80176 0.362305L7.33496 0.895508L1.87598 6.35449Z"
               fill="black" />
           </svg>
-        </div>
-        <div class="btn btn-next">
+        </span>
+        <span class="testimonial-next">
           <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M6.99512 6.35449L0.977539 12.3721L0.444336 11.8135L5.90332 6.35449L0.444336 0.895508L0.977539 0.362305L6.99512 6.35449Z"
               fill="black" />
           </svg>
-        </div>
+        </span>
       </div>
     </div>
   </section>
@@ -596,6 +629,17 @@
         buttons[i].disabled = true;
       }
     }
+  </script>
+
+  <script>
+    const testimonialSwiper = new Swiper(".testimonial-swiper", {
+      speed: 1000,
+      navigation: {
+        nextEl: '.testimonial-next',
+        prevEl: '.testimonial-prev'
+      },
+      slidesPerView: 1,
+    });
   </script>
 </body>
 

@@ -7,14 +7,6 @@
     scroll-behavior: smooth;
 }
 
-:root {
-    --d-red-color: #ff3052;
-    --d-gray-color: #3b3d60;
-    --d-text-color: #707070;
-    --d-white-color: #ffffff;
-    --wa-heading-color: #606989;
-}
-
 ul[role="list"],
 ol[role="list"] {
     list-style: none;
@@ -423,6 +415,8 @@ header {
     flex-direction: column;
     width: 60%;
     gap: 20px;
+    justify-content: center;
+    padding-right: 60px;
 }
 
 .customers-left>h2 {
@@ -468,73 +462,72 @@ header {
     font-family: Roboto;
 }
 
-.customers-right {
+.customers-right{
+    width: 40%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    width: 40%;
-    position: relative;
-}
-
-.customers-right>img {
-    position: absolute;
-    right: 0px;
-    top: 0px
-}
-
-.customer-desc {
-    display: flex;
-    align-items: center;
     gap: 20px;
 }
 
-.customer-desc>img {
-    height: 90px;
-    width: 90px;
+.swiper-container{
+    height: max-content;
+    overflow: hidden;
 }
 
-.customer-desc .customer-details {
-    display: flex;
+.swiper-container .testimonial-card{
+    height: 100%;
+    padding: 10px 38px 10px 15px;
+    display: flex !important;
     flex-direction: column;
+    gap: 30px;
 }
 
-.customer-desc .customer-details h5 {
+.card-head{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+}
+
+.navigation-btns{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-left: 15px;
+}
+
+.navigation-btns span{
+    height: 40px;
+    width: 60px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #E9E9E9;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.navigation-btns span.swiper-button-disabled svg{
+    opacity: 0.2;
+}
+
+.customer-detail h5{
     font-size: 19px;
     font-weight: 500;
     line-height: 22.8px;
     font-family: Roboto;
 }
 
-.customer-desc .customer-details span {
+.customer-detail span{
     font-size: 15px;
     font-weight: 400;
     line-height: 28.5px;
     font-family: Roboto;
 }
 
-.customer-comment {
-    font-family: Petrona;
+.card-body{
     font-size: 19px;
     font-weight: 400;
     line-height: 36.1px;
-    text-align: left;
-    max-width: 545px;
-}
 
-.customer-btns {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.customer-btns .btn {
-    border: 1px solid #E9E9E9;
-    height: 40px;
-    width: 60px;
-    display: grid;
-    place-items: center;
-    border-radius: 40px;
-    cursor: pointer;
 }
 
 .experts_wrap {
@@ -1220,6 +1213,12 @@ footer {
     transform: scale(1);
 }
 
+.comma{
+    position: absolute;
+    right: 70px;
+    z-index: 1;
+}
+
 
 @media screen and (max-width: 1150px) {
     .contact-container .img_container {
@@ -1263,10 +1262,13 @@ footer {
     .vision_container .content h2,
     .services-wrapper>h3,
     .contact-container h3,
-    .why_us .container .right_section h2 {
+    .why_us .container .right_section h2 , .customers-left>h2{
         font-size: 32px;
         text-align: center;
         line-height: 32px;
+    }
+    .customers-left>h2{
+        text-align: left;
     }
 
     .hero p,
@@ -1276,6 +1278,9 @@ footer {
     .why_us .container .right_section p {
         font-size: 18px;
         text-align: center;
+    }
+    .customers-left, .customers-right{
+        width: 50%;
     }
 }
 
@@ -1305,6 +1310,14 @@ footer {
         text-align: center;
     }
 
+    .customers-left{
+        padding-right: 40px;
+    }
+
+    .swiper-container .testimonial-card{
+        padding-left: 0;
+    }
+
 }
 
 
@@ -1313,6 +1326,20 @@ footer {
         flex-direction: column;
         gap: 20px;
         align-items: flex-start;
+    }
+    .customers{
+        flex-direction: column;
+        gap: 60px;
+    }
+    .customers-left, .customers-right{
+        width: 100%;
+    }
+    .customers-left{
+        padding-right: 0;
+    }
+    .navigation-btns{
+        padding-left: 0;
+        justify-content: center;
     }
 }
 
@@ -1332,7 +1359,7 @@ footer {
     .vision_container .content p,
     .services-wrapper>p,
     .contact-container p,
-    .why_us .container .right_section p {
+    .why_us .container .right_section p , .card-body{
         font-size: 16px;
     }
 
@@ -1375,10 +1402,16 @@ footer {
     .footer_container .email {
         width: 350px;
     }
+    .comma{
+        right: 40px;
+    }
 }
 
 @media screen and (max-width: 400px) {
     .benefits {
         width: 333px;
+    }
+    .comma{
+        right: 20px;
     }
 }
