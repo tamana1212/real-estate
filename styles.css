@@ -992,15 +992,16 @@ footer {
 
 }
 
-.why_us .container .right_section p {
+.why_us .container .right_section p , .call_us_container .left_part p{
     font-size: 20px;
     font-weight: 400;
     line-height: 34px;
     text-align: left;
     margin-block-end: 40px;
+    color: #444444;
 }
 
-.why_us .container .right_section a {
+.why_us .container .right_section a, .call_us_container .left_part a {
     padding: 20px 30px;
     background-color: #4856DF;
     border-radius: 12px;
@@ -1219,6 +1220,48 @@ footer {
     z-index: 1;
 }
 
+.contact_main{
+    background-color: #F6FAFD;
+    padding-block: 103px;
+}
+
+
+.contact_main .info_wrapper{
+    margin-block: 0px;
+}
+
+.call_us_container{
+    max-width: 1222px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 65px;
+    padding-inline: 20px;
+    gap: 20px;
+}
+
+.call_us_container .right_part{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.call_us_container .left_part{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 12px;
+}
+
+.call_us_container .left_part h2{
+font-size: 40px;
+font-weight: 700;
+line-height: 45.12px;
+text-align: left;
+
+}
 
 @media screen and (max-width: 1150px) {
     .contact-container .img_container {
@@ -1262,9 +1305,9 @@ footer {
     .vision_container .content h2,
     .services-wrapper>h3,
     .contact-container h3,
-    .why_us .container .right_section h2 , .customers-left>h2{
-        font-size: 32px;
-        text-align: center;
+    .why_us .container .right_section h2 , .customers-left>h2, .call_us_container h2{
+        font-size: 32px !important;
+        text-align: center !important;
         line-height: 32px;
     }
     .customers-left>h2{
@@ -1275,13 +1318,23 @@ footer {
     .vision_container .content p,
     .services-wrapper>p,
     .contact-container p,
-    .why_us .container .right_section p {
-        font-size: 18px;
+    .why_us .container .right_section p , .call_us_container p{
+        font-size: 18px !important;
         text-align: center;
     }
     .customers-left, .customers-right{
         width: 50%;
     }
+    .call_us_container{
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+    .call_us_container>div{
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -1351,16 +1404,16 @@ footer {
     .services-wrapper>h3,
     .contact-container h3,
     .footer_container h4,
-    .why_us .container .right_section h2 {
-        font-size: 28px;
+    .why_us .container .right_section h2, .call_us_container h2 {
+        font-size: 28px !important;
     }
 
     .hero p,
     .vision_container .content p,
     .services-wrapper>p,
     .contact-container p,
-    .why_us .container .right_section p , .card-body{
-        font-size: 16px;
+    .why_us .container .right_section p , .card-body, .call_us_container p{
+        font-size: 16px !important;
     }
 
     .card_wrap {
@@ -1373,7 +1426,7 @@ footer {
     }
 
     .vision_container,
-    .team_wrapper {
+    .team_wrapper , .contact_main{
         padding-block: 60px;
     }
 
@@ -1389,7 +1442,7 @@ footer {
         width: 400px;
     }
 
-    .why_us .container .right_section p {
+    .why_us .container .right_section p,  .call_us_container .left_part p{
         margin-bottom: 20px;
     }
 }
