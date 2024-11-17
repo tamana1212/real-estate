@@ -216,7 +216,7 @@ header {
 } */
 
 .hero-container {
-    max-width: 954px;
+    max-width: 1042px;
     padding-inline: 20px;
     display: flex;
     flex-direction: column;
@@ -253,7 +253,6 @@ header {
     line-height: 28.5px;
     border-radius: 12px;
     color: #fff;
-    margin-block-start: 40px;
 }
 
 .vision_container {
@@ -1264,6 +1263,107 @@ text-align: left;
 
 }
 
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 6px 15px 0px #404F680D;
+    gap: 10px;
+    width: 100%;
+    margin-block-start: 30px;
+  }
+
+  
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding-right: 37px;
+    border-right: 1px solid #E9E9E9;
+  }
+
+  /* .input-group:last-of-type{
+    border-right: unset !important;
+    padding-right: 0px;
+  } */
+
+  .search-container .input-group1{
+    position: relative;
+  }
+
+  .search-container .input-group1 svg{
+    position: absolute;
+    right: 30px;
+    top: 50%
+  }
+  
+  label {
+    font-size: 13px;
+    line-height: 24.7px;
+    text-align: left; 
+    color: #969696; 
+  }
+  
+  .keyword-input,
+  .dropdown select {
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding: 0px;
+    font-size: 15px;
+    width: 100%;
+    color: #1A1A1A;
+  }
+  .keyword-input::placeholder{
+    color: #1A1A1A;
+    font-size: 15px;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown select {
+    appearance: none; 
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  /* .dropdown::after {
+    content: "▼";
+    font-size: 10px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    pointer-events: none;
+    color: #000;
+  } */
+
+  .dropdown svg{
+    position: absolute;
+    right: 37px;
+    top: 50%;
+    pointer-events: none;
+  }
+  
+  .search-button {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
 @media screen and (max-width: 1150px) {
     .contact-container .img_container {
         display: none;
@@ -1371,6 +1471,9 @@ text-align: left;
     .swiper-container .testimonial-card{
         padding-left: 0;
     }
+    .input-group{
+        width: 40%;
+    }
 
 }
 
@@ -1445,6 +1548,9 @@ text-align: left;
 
     .why_us .container .right_section p,  .call_us_container .left_part p{
         margin-bottom: 20px;
+    }
+    .input-group{
+        width: 100%;
     }
 }
 
