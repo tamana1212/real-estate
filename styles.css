@@ -158,6 +158,11 @@ header {
 
 .logo img {
     margin-right: 10px;
+    height: 100px;
+}
+
+.logo_img{
+    height: 60px;
 }
 
 .logo h1 {
@@ -535,7 +540,9 @@ header {
     align-items: center;
     margin-top: 50px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 990px;
+    width: 100%;
 }
 
 .experts_wrap .expert img {
@@ -569,9 +576,8 @@ header {
 
 .expert {
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    gap: 2px;
+    gap: 6px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -580,6 +586,12 @@ header {
 .expert.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.expert > div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 
